@@ -1,10 +1,12 @@
-// webpack.config.js
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import { fileURLToPath } from 'url';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
-    entry: './src/index.js',
-    mode: 'development',
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default {
+    entry: './src/app.js',
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist')
@@ -18,7 +20,12 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: [
-                            ['@babel/preset-env', { targets: "defaults" }]
+                            "@babel/preset-env", [
+                                "@babel/preset-react",
+                                {
+                                    "runtime": "automatic"
+                                }
+                            ]
                         ]
                     }
                 }
@@ -29,13 +36,13 @@ module.exports = {
                     "style-loader",
                     "css-loader",
                     "sass-loader"
-                ],
+                ]
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: './src/index.html'
         })
     ],
     devServer: {

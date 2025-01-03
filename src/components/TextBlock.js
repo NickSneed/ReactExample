@@ -1,5 +1,5 @@
-import Button from './Button';
 import { memo } from "react";
+import Button from './Button.js';
 
 function TextBlock(props) {
     const btns = ['yes', 'no']

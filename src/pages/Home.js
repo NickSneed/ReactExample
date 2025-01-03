@@ -1,9 +1,9 @@
-import TextBlock from './../components/TextBlock';
+import TextBlock from './../components/TextBlock.js';
 
 const Home = () => {
     const home = (
         <>
-            <TextBlock copy={'home'} />
+            <TextBlock copy={'Home'} />
         </>
     )
     return home;
