@@ -5,7 +5,7 @@
   "description": "A basic React setup using NPM and Webpack.",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "stylelint src/styles",
     "build": "node build/clearConsole && rimraf dist/* --glob && webpack --mode production",
     "start": "node build/clearConsole && webpack serve --mode development"
   },
@@ -24,6 +24,9 @@
     "sass": "^1.83.0",
     "sass-loader": "^16.0.4",
     "style-loader": "^4.0.0",
+    "stylelint": "^16.19.1",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-scss": "^6.11.1",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
