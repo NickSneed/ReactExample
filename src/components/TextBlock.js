@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { memo } from "react";
 import Button from './Button.js';
 
@@ -14,5 +15,9 @@ function TextBlock(props) {
     )
     return myEl;
 }
+
+TextBlock.propTypes = {
+    copy: PropTypes.string.isRequired,
+};
 
 export default memo(TextBlock);

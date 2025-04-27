@@ -14,7 +14,7 @@ const getPeopleInSpace = (setPeople) => {
         });
 }
 
-const Secondary = (props, state) => {
+const Secondary = () => {
     const [color, setColor] = useState("red");
     const [count, setCount] = useState(0);
     const [people, setPeople] = useState(0);
@@ -33,7 +33,7 @@ const Secondary = (props, state) => {
             <button type="button" onClick={() => setColor("red")}>Red</button>
             <button type="button" onClick={() => setColor("pink")} >Pink</button>
             <button type="button" onClick={() => setColor("green")}>Green</button>
-            <p>I've rendered {count} times!</p>
+            <p>I&apos;ve rendered {count} times!</p>
         </>
     )
     return page;

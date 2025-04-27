@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { memo } from "react";
 
 function Button(props) {
@@ -7,5 +8,9 @@ function Button(props) {
 
     return <button onClick={doSomething}>{props.txt}</button>;
 }
+
+Button.propTypes = {
+    txt: PropTypes.string.isRequired,
+};
 
 export default memo(Button);
